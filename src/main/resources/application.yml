@@ -1,0 +1,24 @@
+spring:
+  profiles: default
+  application:
+    name: online-deal-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: assignment
+logging:
+  level:
+    root: INFO
+server:
+  port: 8082
+
+deal.poolTaskExecutor.size: 20
+
+promotion.service.criteria.uri: http://localhost:8081/api-service/promotion/v1/criteria
+user.profile.service.criteria.uri:  http://localhost:8080/api-service/users/v1/criteria
